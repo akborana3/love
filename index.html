@@ -1,10 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy girlfriend day babe 😘</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div class="bg_heart">
     <div class="container">
       <h2 id="text1"></h2>
@@ -34,7 +36,18 @@
     </footer>
   </div>
 
+  <audio id="background-music" src="https://audio.jukehost.co.uk/cB68UECSZZFa4JEFjNdjZMNU8HQuAaI5"></audio>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="main.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      var audio = document.getElementById('background-music');
+      audio.play().catch(error => {
+        // Handle the error if the audio couldn't be played automatically
+        console.log("Audio play failed due to user interaction requirement.");
+      });
+    });
+  </script>
 </body>
 </html>
